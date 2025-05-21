@@ -1,0 +1,78 @@
+Backend:
+
+src/main/java/com/library/
+├── config/
+│   └── SecurityConfig.java
+├── controller/
+│   ├── AuthController.java
+│   ├── BookController.java
+│   ├── BorrowController.java
+│   ├── ReturnController.java
+│   ├── ReviewController.java
+│   ├── NotificationController.java
+│   └── ReportController.java
+├── entity/
+│   ├── User.java
+│   ├── Admin.java
+│   ├── Anggota.java
+│   ├── Buku.java
+│   ├── Kategori.java
+│   ├── Peminjaman.java
+│   ├── Pengembalian.java
+│   ├── BuktiPeminjaman.java
+│   ├── Ulasan.java
+│   ├── Notifikasi.java
+│   └── Laporan.java
+├── repository/
+│   ├── UserRepository.java
+│   ├── AdminRepository.java
+│   ├── AnggotaRepository.java
+│   ├── BukuRepository.java
+│   ├── KategoriRepository.java
+│   ├── PeminjamanRepository.java
+│   ├── PengembalianRepository.java
+│   ├── BuktiPeminjamanRepository.java
+│   ├── UlasanRepository.java
+│   ├── NotifikasiRepository.java
+│   └── LaporanRepository.java
+├── service/
+│   ├── AuthService.java
+│   ├── BookService.java
+│   ├── BorrowService.java
+│   ├── ReturnService.java
+│   ├── ReviewService.java
+│   ├── NotificationService.java
+│   └── ReportService.java
+├── dto/
+│   ├── LoginRequest.java
+│   ├── RegisterRequest.java
+│   ├── BookDTO.java
+│   └── BorrowRequest.java
+└── Application.java
+
+Data base :
+├── DataBase/
+│   
+└── databasesmartlibrary.sql
+
+Frontend :
+
+src/
+├── components/
+│   ├── Login.js
+│   ├── Register.js
+│   ├── BookSearch.js
+│   ├── BookManagement.js
+│   ├── BorrowForm.js
+│   ├── ReturnForm.js
+│   ├── ReviewForm.js
+│   ├── NotificationList.js
+│   ├── ReportDashboard.js
+│   └── AdminDashboard.js
+├── pages/
+│   ├── Home.js
+│   ├── MemberDashboard.js
+│   └── AdminPage.js
+├── App.js
+├── index.js
+└── index.css

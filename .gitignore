@@ -1,0 +1,17 @@
+```
+     # Backend
+     target/
+     *.log
+     .mvn/
+     mvnw
+     mvnw.cmd
+
+     # Frontend
+     node_modules/
+     build/
+     .DS_Store
+
+     # Environment
+     *.env
+     application.properties
+     ```
