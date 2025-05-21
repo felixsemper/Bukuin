@@ -1,0 +1,47 @@
+{
+  "name": "smartlibrary",
+  "version": "1.0.0",
+  "description": "**Aplikasi Perpustakaan Digital** adalah sistem manajemen perpustakaan berbasis web yang dirancang untuk mengotomatisasi operasional perpustakaan, seperti pencarian buku, peminjaman, pengembalian, ulasan, notifikasi, dan pelaporan. Aplikasi ini dibangun dengan **Spring Boot** untuk backend dan **React** untuk frontend, menggunakan autentikasi berbasis JWT dan akses berbasis peran (Admin dan Anggota). Proyek ini bertujuan untuk memberikan solusi modern, efisien, dan ramah pengguna bagi perpustakaan.",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixsemper/Bukuin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixsemper/Bukuin/issues"
+  },
+  "homepage": "https://github.com/felixsemper/Bukuin",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "eslint-plugin-react": "^7.37.5",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
+  }
+}

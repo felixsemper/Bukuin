@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'; // Tambahkan useNavigate jika Anda menggunakannya di App.js
+import axios from 'axios';
+
+// Import komponen-komponen halaman Anda dengan jalur yang benar
 import Home from './pages/Home';
 import MemberDashboard from './pages/MemberDashboard';
 import AdminPage from './pages/AdminPage';
 import Login from './components/Login';
 import Register from './components/Register';
-import axios from 'axios';
 
 const App = () => {
     const [user, setUser] = useState(null);
+    const navigate = useNavigate(); // Inisialisasi useNavigate di sini jika Anda menggunakannya di App.js
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -27,12 +30,13 @@ const App = () => {
     const handleLogout = () => {
         localStorage.removeItem('token');
         setUser(null);
+        navigate('/login'); // Redirect ke halaman login setelah logout
     };
 
     return (
         <div className="min-h-screen bg-gray-100">
             <header className="bg-blue-600 text-white p-4">
-                <div className="container flex justify-between items-center">
+                <div className="container mx-auto flex justify-between items-center"> {/* Tambahkan mx-auto */}
                     <h1 className="text-2xl font-bold">Digital Library</h1>
                     {user && (
                         <div>
@@ -49,7 +53,8 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login setUser={setUser} />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/member" element={user && user.role === 'ANGGOTA' ? <MemberDashboard user={user} /> : <Navigate to="/login" />} />
+                    {/* Perbaiki role dari 'ANGGOTA' menjadi 'MEMBER' jika itu yang digunakan di backend user.role */}
+                    <Route path="/member" element={user && user.role === 'MEMBER' ? <MemberDashboard user={user} /> : <Navigate to="/login" />} />
                     <Route path="/admin" element={user && user.role === 'ADMIN' ? <AdminPage /> : <Navigate to="/login" />} />
                 </Routes>
             </main>
